@@ -17,8 +17,6 @@ char **strtow(char *str)
 
 	len = 0;
 	count = 0;
-
-	/* Count the number of words in the string */
 	for (i = 0; str[i] != '\0'; i++)
 	{
 		if (str[i] != ' ' && (str[i + 1] == ' ' || str[i + 1] == '\0'))
@@ -32,7 +30,6 @@ char **strtow(char *str)
 	if (words == NULL)
 		return (NULL);
 
-	/* Split the string into words and store them in the array */
 	for (i = 0, k = 0; i < count; i++)
 	{
 		while (str[k] == ' ')
@@ -59,4 +56,3 @@ char **strtow(char *str)
 	words[i] = NULL;
 	return (words);
 }
-
